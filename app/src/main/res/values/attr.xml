@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyViewPager">
+        <attr name="isVertical" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ScrollerLayout">
+        <attr name="direction">
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

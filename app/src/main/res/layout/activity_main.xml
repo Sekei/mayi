@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/rl_match_parent"
+    android:background="@color/color_000">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0px"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false">
+
+        <RelativeLayout style="@style/rl_match_parent">
+
+            <com.mayi.video.widget.VerticalViewPager
+                android:id="@+id/viewpager"
+                style="@style/view_match_parent" />
+
+            <com.mayi.video.utils.CompatToolbar style="@style/view">
+
+                <RelativeLayout style="@style/rl">
+
+                    <LinearLayout
+                        style="@style/ll_horizontal_wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            style="@style/tv_ffffff"
+                            android:text="推荐"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            style="@style/tv_ffffff"
+                            android:layout_marginLeft="25dp"
+                            android:text="附近"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/icon_search" />
+                </RelativeLayout>
+            </com.mayi.video.utils.CompatToolbar>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.githang.statusbar.StatusBarCompat;
 import com.mayi.video.R;
 
 import java.util.HashMap;
@@ -70,6 +71,7 @@ public abstract class ActionBarActivity extends BaseActivity implements IBaseVie
     protected void initActionBar() {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);// 锁定竖屏
         setContentView(getLayoutId());
+        StatusBarCompat.setStatusBarColor(this, getResources().getColor(R.color.color_white));
         //初始化BUtterKnife框架，可写在项目基类里面。
         ButterKnife.bind(this);
         if (getActionBarType() == ACTIONBAR_DARK) { //透明风格设计

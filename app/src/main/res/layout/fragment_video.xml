@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_eaeaea"
+    style="@style/ll_vertical_match_parent"
+    android:fitsSystemWindows="true">
+
+
+</LinearLayout>

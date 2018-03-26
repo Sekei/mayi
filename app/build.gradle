@@ -33,7 +33,12 @@ dependencies {
     compile 'com.makeramen:roundedimageview:2.2.1'
     //通知栏变色框架
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.githang:status-bar-compat:latest.integration'
     //注解框架
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //tablayout
+    implementation 'com.android.support:design:26.1.0'
+    //xtablayout解决选中字体放大及指示条随tab长度变化而变化
+    compile 'com.androidkun:XTabLayout:1.1.3'
 }

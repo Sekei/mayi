@@ -9,8 +9,10 @@ import android.widget.RadioGroup;
 
 import com.mayi.video.R;
 import com.mayi.video.base.ActionBarActivity;
+import com.mayi.video.fragment.FollowFragment;
 import com.mayi.video.fragment.HomeFragment;
 import com.mayi.video.fragment.MyFragment;
+import com.mayi.video.fragment.NewsFragment;
 
 import butterknife.BindView;
 
@@ -35,8 +37,8 @@ public class HomeActivity extends ActionBarActivity implements RadioGroup.OnChec
     protected void initView() {
         super.initView();
         mFragmensts[0] = new HomeFragment();//首页
-        mFragmensts[1] = new HomeFragment();//关注
-        mFragmensts[2] = new HomeFragment();//消息
+        mFragmensts[1] = new FollowFragment();//关注
+        mFragmensts[2] = new NewsFragment();//消息
         mFragmensts[3] = new MyFragment();//我的
         mRadioGroup.setOnCheckedChangeListener(this);
         mRadioButtonHome.setChecked(true);

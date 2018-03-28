@@ -3,12 +3,10 @@ package com.mayi.video.act;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.mayi.video.R;
 import com.mayi.video.base.ActionBarActivity;
-import com.mayi.video.fragment.MyFragment;
+import com.mayi.video.fragment.VideoPageFragment;
 import com.mayi.video.widget.VerticalViewPager;
 
 import butterknife.BindView;
@@ -50,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return MyFragment.newInstance(position);
+            return VideoPageFragment.newInstance(position);
         }
     }
 }

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/color_eaeaea"
-    style="@style/ll_vertical_match_parent"
-    android:fitsSystemWindows="true">
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_video"
+    style="@style/view_match_parent"
+    android:scrollbars="vertical" />
 
-
-</LinearLayout>

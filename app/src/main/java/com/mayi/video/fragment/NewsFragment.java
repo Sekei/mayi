@@ -1,20 +1,21 @@
 package com.mayi.video.fragment;
 
-
 import android.view.View;
 
 import com.mayi.video.R;
 import com.mayi.video.base.BaseFragment;
 
 /**
- * Created by MissSekei on 2018/1/12.
+ * Created by admin on 2018/3/14.
+ * 消息
  */
 
-public class MyFragment extends BaseFragment {
+public class NewsFragment extends BaseFragment {
+
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_my;
+        return R.layout.fragment_news;
     }
 
     @Override
@@ -22,4 +23,5 @@ public class MyFragment extends BaseFragment {
         super.initView(view);
 
     }
+
 }

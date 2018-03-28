@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ll_vertical_match_parent"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        style="@style/rl"
+        android:layout_height="50dp">
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_centerInParent="true"
+            android:text="我的"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/ll_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/user_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/icon_user"
+            app:riv_border_color="@color/color_ff9000"
+            app:riv_border_width="5dp"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            style="@style/ll_vertical"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                style="@style/tv_333333"
+                android:text="往事随风"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_333333"
+                android:layout_marginTop="5dp"
+                android:text="蚂蚁号：9865925"
+                android:textSize="10sp" />
+
+            <TextView
+                style="@style/tv_666666"
+                android:layout_marginTop="5dp"
+                android:text="本宝宝暂时还没有想到个性签名~~"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_horizontal"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            style="@style/tv_ffffff"
+            android:background="@drawable/label_d4237a_bg"
+            android:text="上海"
+            android:textSize="10sp" />
+
+        <TextView
+            style="@style/tv_ffffff"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/default_label_bg"
+            android:text="性别未填写"
+            android:textSize="10sp" />
+
+        <TextView
+            style="@style/tv_ffffff"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/default_label_bg"
+            android:text="年龄未填写"
+            android:textSize="10sp" />
+
+        <TextView
+            style="@style/tv_ffffff"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/default_label_bg"
+            android:text="星座未填写"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_horizontal"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/tv_333333"
+            android:text="0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_marginLeft="2dp"
+            android:text="获赞" />
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_marginLeft="15dp"
+            android:text="0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_marginLeft="2dp"
+            android:text="关注" />
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_marginLeft="15dp"
+            android:text="0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_marginLeft="2dp"
+            android:text="粉丝" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_horizontal"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_ff9000"
+            android:gravity="center"
+            android:text="作品0" />
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="喜欢0" />
+
+        <TextView
+            style="@style/tv_333333"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="故事0" />
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/rl"
+        android:layout_height="match_parent"
+        android:background="@color/color_eaeaea">
+
+        <LinearLayout
+            style="@style/ll_vertical_wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_video_bg" />
+
+            <TextView
+                style="@style/tv_666666"
+                android:layout_marginTop="8dp"
+                android:text="还没有视频"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

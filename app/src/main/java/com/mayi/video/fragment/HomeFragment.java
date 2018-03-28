@@ -37,7 +37,7 @@ public class HomeFragment extends BaseFragment {
     protected void initView(View view) {
         super.initView(view);
         List<Fragment> list = new ArrayList<>();
-        list.add(new VideoFragment());
+        list.add(new SpotVideoFragment());
         list.add(new VideoFragment());
         list.add(new VideoFragment());
         TabAdapter adapter = new TabAdapter(getActivity().getSupportFragmentManager(), titles, list);

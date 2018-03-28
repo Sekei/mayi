@@ -31,6 +31,23 @@
             android:layout_height="wrap_content"
             android:text="关注" />
 
+        <RelativeLayout
+            style="@style/rl_wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/radius_20_theme" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_add" />
+        </RelativeLayout>
+
         <RadioButton
             android:id="@+id/home_radio_expert"
             style="@style/RadioGroupButtonStyle"

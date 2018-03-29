@@ -22,33 +22,7 @@
 
                 <RelativeLayout style="@style/rl">
 
-                    <LinearLayout
-                        style="@style/ll_horizontal_wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerInParent="true"
-                        android:layout_marginTop="20dp">
 
-                        <TextView
-                            style="@style/tv_ffffff"
-                            android:text="推荐"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            style="@style/tv_ffffff"
-                            android:layout_marginLeft="25dp"
-                            android:text="附近"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="23dp"
-                        android:layout_height="23dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerInParent="true"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="20dp"
-                        android:src="@drawable/icon_search" />
                 </RelativeLayout>
             </com.mayi.video.utils.CompatToolbar>
         </RelativeLayout>

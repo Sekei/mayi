@@ -37,9 +37,9 @@ public class HomeFragment extends BaseFragment {
     protected void initView(View view) {
         super.initView(view);
         List<Fragment> list = new ArrayList<>();
-        list.add(new SpotVideoFragment());
-        list.add(new VideoFragment());
-        list.add(new VideoFragment());
+        list.add(new SpotVideoFragment());//直播
+        list.add(new VideoFragment());//视频
+        list.add(new CityWideFragment());//同城
         TabAdapter adapter = new TabAdapter(getActivity().getSupportFragmentManager(), titles, list);
         viewPager.setAdapter(adapter);
         mXTab.setupWithViewPager(viewPager);  //绑定

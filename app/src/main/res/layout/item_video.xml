@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/ll_vertical">
 
     <RelativeLayout
@@ -15,24 +16,33 @@
         <TextView
             style="@style/tv_ffffff"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="45dp"
-            android:text="曾经沧海难为水，除去巫山不是云" />
+            android:layout_marginBottom="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text="曾经沧海难为水，除去巫山不是云"
+            android:textSize="13sp" />
 
         <LinearLayout
             style="@style/ll_horizontal"
-            android:layout_height="35dp"
             android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
             android:gravity="center_vertical">
 
-            <ImageView
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/user_img"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/icon_user"
+                app:riv_border_color="@color/color_ff9000"
+                app:riv_border_width="0.1dp"
+                app:riv_oval="true" />
 
             <TextView
                 style="@style/tv_ffffff"
                 android:layout_marginLeft="5dp"
-                android:text="迷人的小妖精" />
+                android:text="迷人的小妖精"
+                android:textSize="13sp" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

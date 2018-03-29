@@ -6,6 +6,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.mayi.video.R;
+import com.mayi.video.adapter.SpotVideoAdapter;
 import com.mayi.video.adapter.VideoAdapter;
 import com.mayi.video.base.BaseFragment;
 import com.mayi.video.bean.VideoBean;
@@ -57,14 +58,15 @@ public class SpotVideoFragment extends BaseFragment implements OnBannerListener 
         mRvSpotVideo.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         mRvSpotVideo.addItemDecoration(new SpaceItemDecoration(10));//设置item间距
         List<VideoBean> arr = new ArrayList<>();
-        arr.add(new VideoBean("不知说什么好", "@好好出去", "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=649082768,23368305&fm=27&gp=0.jpg", ""));
-        arr.add(new VideoBean("", "", "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3953222029,947888612&fm=27&gp=0.jpg", ""));
-        arr.add(new VideoBean("", "", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3953468641,3148993378&fm=27&gp=0.jpg", ""));
-        arr.add(new VideoBean("", "", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1626078464,505535105&fm=27&gp=0.jpg", ""));
-        arr.add(new VideoBean("", "", "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2091747130,1959072992&fm=27&gp=0.jpg", ""));
-        arr.add(new VideoBean("", "", "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3047379139,2164593581&fm=27&gp=0.jpg", ""));
-        arr.add(new VideoBean("", "", "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4053517463,3283913509&fm=27&gp=0.jpg", ""));
-        mRvSpotVideo.setAdapter(new VideoAdapter(getActivity(), arr));
+        arr.add(new VideoBean("", "", "http://img5.imgtn.bdimg.com/it/u=3996570745,3915371036&fm=27&gp=0.jpg", ""));
+        arr.add(new VideoBean("", "", "http://img2.imgtn.bdimg.com/it/u=4292769579,3818176239&fm=27&gp=0.jpg", ""));
+        arr.add(new VideoBean("", "", "http://img0.imgtn.bdimg.com/it/u=3593429503,2723687451&fm=27&gp=0.jpg", ""));
+        arr.add(new VideoBean("", "", "http://img4.imgtn.bdimg.com/it/u=2398241401,2139197401&fm=27&gp=0.jpg", ""));
+        arr.add(new VideoBean("", "", "http://img5.imgtn.bdimg.com/it/u=4284473700,1365394059&fm=27&gp=0.jpg", ""));
+        arr.add(new VideoBean("", "", "http://img4.imgtn.bdimg.com/it/u=3093385083,2915303339&fm=27&gp=0.jpg", ""));
+        arr.add(new VideoBean("", "", "http://img0.imgtn.bdimg.com/it/u=3646232460,1248058942&fm=27&gp=0.jpg", ""));
+        arr.add(new VideoBean("", "", "http://img1.imgtn.bdimg.com/it/u=729148239,4015690160&fm=27&gp=0.jpg", ""));
+        mRvSpotVideo.setAdapter(new SpotVideoAdapter(getActivity(), arr));
     }
 
     /**

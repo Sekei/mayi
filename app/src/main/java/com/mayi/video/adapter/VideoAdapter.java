@@ -1,9 +1,11 @@
 package com.mayi.video.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.widget.ImageView;
 
 import com.mayi.video.R;
+import com.mayi.video.act.MainActivity;
 import com.mayi.video.base.CommonRecycleAdapter;
 import com.mayi.video.base.CommonViewHolder;
 import com.mayi.video.bean.VideoBean;
@@ -34,7 +36,7 @@ public class VideoAdapter extends CommonRecycleAdapter<VideoBean> implements Com
 
     @Override
     public void onItemClickListener(int position) {
-        //mContext.startActivity(new Intent(mContext, ArtistDetailsAct.class));
+        mContext.startActivity(new Intent(mContext, MainActivity.class));
     }
 
     @Override

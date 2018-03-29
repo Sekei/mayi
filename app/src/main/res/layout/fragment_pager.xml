@@ -2,28 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/rl_match_parent"
-    android:background="@color/colorPrimary">
+    android:background="@color/color_000"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/video_bg" />
+    <com.xiao.nicevideoplayer.NiceVideoPlayer
+        android:id="@+id/video_player"
+        style="@style/view"
+        android:layout_centerInParent="true" />
 
     <LinearLayout
         style="@style/ll_vertical_wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="60dp"
-        android:layout_marginRight="15dp">
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center">
 
         <RelativeLayout
             style="@style/rl_wrap_content"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
 
             <com.makeramen.roundedimageview.RoundedImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/user_img"
                 app:riv_border_color="@color/color_white"
                 app:riv_border_width="5dp"
@@ -38,63 +40,63 @@
         </RelativeLayout>
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/icon_collection" />
 
         <TextView
             style="@style/tv_ffffff"
-            android:layout_gravity="center"
             android:text="143.5w"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/icon_comment" />
 
         <TextView
             style="@style/tv_ffffff"
-            android:layout_gravity="center"
             android:text="3.5w"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/icon_share" />
 
         <TextView
             style="@style/tv_ffffff"
-            android:layout_gravity="center"
             android:text="分享"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/icon_music" />
     </LinearLayout>
 
     <LinearLayout
         style="@style/ll_vertical_wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="50dp"
         android:layout_marginLeft="15dp">
 
         <TextView
             style="@style/tv_ffffff"
-            android:text=" @笑看红尘"
-            android:textSize="13sp"
+            android:text="#笑看红尘"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
             style="@style/tv_ffffff"
             android:layout_marginTop="5dp"
             android:text="只是生活中的一个过客"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
         <TextView
             style="@style/tv_ffffff"
@@ -104,6 +106,37 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
             android:text="人民日报生活漫步：莫让千元打车费毁了专车"
-            android:textSize="11sp" />
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_horizontal"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_input" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="喜欢就要说出来"
+            android:textColorHint="@color/color_666666"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/tv_666666"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text=" @"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>

@@ -322,6 +322,19 @@ public class TxVideoPlayerController
         }
     };
 
+    /**
+     * 暂停、播放
+     */
+    public void pause() {
+        if (mNiceVideoPlayer.isPlaying() || mNiceVideoPlayer.isBufferingPlaying()) {
+            mNiceVideoPlayer.pause();
+            mCenterStart.setVisibility(View.VISIBLE);
+        } else if (mNiceVideoPlayer.isPaused() || mNiceVideoPlayer.isBufferingPaused()) {
+            mNiceVideoPlayer.restart();
+            mCenterStart.setVisibility(View.GONE);
+        }
+    }
+
     @Override
     protected void reset() {
         topBottomVisible = false;
@@ -336,7 +349,7 @@ public class TxVideoPlayerController
         mBottom.setVisibility(View.GONE);
         mFullScreen.setImageResource(R.drawable.ic_player_enlarge);
 
-        mLength.setVisibility(View.VISIBLE);
+        //mLength.setVisibility(View.VISIBLE);
 
         mTop.setVisibility(View.VISIBLE);
         mBack.setVisibility(View.GONE);
@@ -417,7 +430,7 @@ public class TxVideoPlayerController
      */
     private void setTopBottomVisible(boolean visible) {
         mTop.setVisibility(visible ? View.VISIBLE : View.GONE);
-        mBottom.setVisibility(visible ? View.VISIBLE : View.GONE);
+        //mBottom.setVisibility(visible ? View.VISIBLE : View.GONE);
         topBottomVisible = visible;
         if (visible) {
             if (!mNiceVideoPlayer.isPaused() && !mNiceVideoPlayer.isBufferingPaused()) {

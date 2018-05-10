@@ -77,6 +77,8 @@ public abstract class ActionBarActivity extends BaseActivity implements IBaseVie
         if (getActionBarType() == ACTIONBAR_DARK) { //透明风格设计
             setStatusBarColor();//通知栏透明
         } else if (getActionBarType() == ACTIONBAR_WHITE) {//默认风格
+            mTitle = findViewById(R.id.title);
+            mTitle.setText(getTitle());
         }
     }
 

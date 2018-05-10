@@ -1,11 +1,16 @@
 package com.mayi.video.fragment;
 
 
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
+import com.liaoinstan.springview.container.DefaultFooter;
+import com.liaoinstan.springview.container.DefaultHeader;
+import com.liaoinstan.springview.widget.SpringView;
 import com.mayi.video.R;
+import com.mayi.video.act.WebAct;
 import com.mayi.video.adapter.SpotVideoAdapter;
 import com.mayi.video.adapter.VideoAdapter;
 import com.mayi.video.base.BaseFragment;
@@ -26,12 +31,14 @@ import butterknife.BindView;
  * 直播
  */
 
-public class SpotVideoFragment extends BaseFragment implements OnBannerListener {
+public class SpotVideoFragment extends BaseFragment implements OnBannerListener, SpringView.OnFreshListener {
 
     @BindView(R.id.home_banner)
     Banner mHomeBanner;
     @BindView(R.id.rv_spotvideo)
     RecyclerView mRvSpotVideo;
+    @BindView(R.id.springview)
+    SpringView mSpringView;
 
 
     @Override
@@ -67,6 +74,38 @@ public class SpotVideoFragment extends BaseFragment implements OnBannerListener 
         arr.add(new VideoBean("", "", "http://img0.imgtn.bdimg.com/it/u=3646232460,1248058942&fm=27&gp=0.jpg", ""));
         arr.add(new VideoBean("", "", "http://img1.imgtn.bdimg.com/it/u=729148239,4015690160&fm=27&gp=0.jpg", ""));
         mRvSpotVideo.setAdapter(new SpotVideoAdapter(getActivity(), arr));
+        //下拉上啦刷新
+        mSpringView.setType(SpringView.Type.FOLLOW);
+        mSpringView.setListener(this);
+        mSpringView.setHeader(new DefaultHeader(getActivity()));
+        mSpringView.setFooter(new DefaultFooter(getActivity()));
+    }
+
+
+    /**
+     * 下拉刷新
+     */
+    @Override
+    public void onRefresh() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mSpringView.onFinishFreshAndLoad();
+            }
+        }, 1000);
+    }
+
+    /**
+     * 上拉加载更多
+     */
+    @Override
+    public void onLoadmore() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mSpringView.onFinishFreshAndLoad();
+            }
+        }, 1000);
     }
 
     /**
@@ -76,6 +115,6 @@ public class SpotVideoFragment extends BaseFragment implements OnBannerListener 
      */
     @Override
     public void OnBannerClick(int position) {
-        // startActivity(ShareWebAct.class, "http://www.artpollo.com/Artwork/ArtworkDetails?id=2224886");
+        startActivity(WebAct.class);
     }
 }

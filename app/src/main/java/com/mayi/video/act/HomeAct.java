@@ -16,7 +16,7 @@ import com.mayi.video.fragment.NewsFragment;
 
 import butterknife.BindView;
 
-public class HomeActivity extends ActionBarActivity implements RadioGroup.OnCheckedChangeListener {
+public class HomeAct extends ActionBarActivity implements RadioGroup.OnCheckedChangeListener {
     //记录用户首次点击返回键的时间
     private long firstTime = 0;
 
@@ -26,6 +26,12 @@ public class HomeActivity extends ActionBarActivity implements RadioGroup.OnChec
     RadioButton mRadioButtonHome;
     private Fragment[] mFragmensts = new Fragment[4];
     private Fragment mFragment = null;
+
+
+    @Override
+    protected int getActionBarType() {
+        return ACTIONBAR_TRANSLATE;
+    }
 
     @Override
     protected int getLayoutId() {

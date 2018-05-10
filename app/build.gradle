@@ -48,4 +48,5 @@ dependencies {
     //圆角头像框架
     compile 'com.makeramen:roundedimageview:2.2.1'
     implementation project(':videoplayer')
+    implementation project(':refresh')
 }

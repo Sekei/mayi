@@ -11,7 +11,7 @@ import com.mayi.video.widget.VerticalViewPager;
 
 import butterknife.BindView;
 
-public class MainActivity extends ActionBarActivity {
+public class MainAct extends ActionBarActivity {
 
     @BindView(R.id.viewpager)
     VerticalViewPager mViewPager;
